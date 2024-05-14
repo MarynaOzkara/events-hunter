@@ -1,15 +1,17 @@
 import "./App.css";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { getEvents } from "./redux/events-api";
 
 const App = () => {
-  const [data, setData] = useState(null);
   useEffect(() => {
-    fetch("/api")
-      .then((response) => response.json())
-      .then((response) => setData(response.message));
+    getEvents().then((data) => console.log(data));
   }, []);
-  return <div>{!data ? "Loadding..." : data}</div>;
+  return (
+    <div>
+      <h1>Events</h1>
+    </div>
+  );
 };
 
 export default App;
