@@ -17,6 +17,9 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 app.use("/api/events", eventRouter);
+app.get("/", (req, res) => {
+  res.json("Hello from backend");
+});
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });

@@ -1,5 +1,5 @@
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3001/api";
+axios.defaults.baseURL = "https://events-hunter.onrender.com";
 export const getEvents = async () => {
   try {
     const data = await axios.get("/events");
