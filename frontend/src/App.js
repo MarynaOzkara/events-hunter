@@ -9,7 +9,7 @@ const App = () => {
   }, []);
   return (
     <div>
-      <h1>Events</h1>
+      <h1>Restaurants</h1>
     </div>
   );
 };
